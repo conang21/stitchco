@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://conang21.github.io/stitchco/sitemap.xml
