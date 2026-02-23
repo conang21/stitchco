@@ -19,10 +19,14 @@
         .product-image { height: 220px; background: linear-gradient(145deg, #e8e8e8, #f0f0f0); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
         .product-info { padding: 1.5rem; }
         .product-name { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .product-desc { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
-        .product-price { font-size: 1.3rem; font-weight: bold; color: #e63946; }
+        .product-desc { color: #666; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .product-price { font-size: 1.3rem; font-weight: bold; color: #e63946; margin-bottom: 0.5rem; }
+        .product-stock { font-size: 0.85rem; color: #27ae60; margin-bottom: 0.5rem; }
+        .product-stock.low { color: #e63946; }
         .badge { display: inline-block; background: #e63946; color: #fff; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; margin-left: 0.5rem; }
-        .sizes { margin-top: 0.5rem; font-size: 0.85rem; color: #666; }
+        .colors { display: flex; gap: 0.5rem; margin: 0.5rem 0; flex-wrap: wrap; }
+        .color-dot { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #ddd; }
+        .sizes { font-size: 0.85rem; color: #666; }
         footer { background: #1a1a1a; color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
     </style>
 </head>
@@ -33,6 +37,8 @@
             <li><a href="hats.html">Hats</a></li>
             <li><a href="tshirts.html">T-Shirts</a></li>
             <li><a href="hoodies.html" class="active">Hoodies</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -43,66 +49,37 @@
     </div>
 
     <div class="container">
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image">🔥</div>
-                <div class="product-info">
-                    <div class="product-name">Flame Graphic Hoodie <span class="badge">Bestseller</span></div>
-                    <div class="product-desc">Oversized fit. Large front & back embroidery with flame design.</div>
-                    <div class="product-price">$69.99</div>
-                    <div class="sizes">Sizes: S - XXL</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">🐲</div>
-                <div class="product-info">
-                    <div class="product-name">Dragon Yin Yang</div>
-                    <div class="product-desc">Heavyweight fleece. Intricate dragon embroidery on back.</div>
-                    <div class="product-price">$74.99</div>
-                    <div class="sizes">Sizes: M - XL</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">🌙</div>
-                <div class="product-info">
-                    <div class="product-name">Celestial Moon Hoodie</div>
-                    <div class="product-desc">Puff embroidery of moon phases & stars. Ultra-soft inside.</div>
-                    <div class="product-price">$64.99</div>
-                    <div class="sizes">Sizes: S - XL</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">🦁</div>
-                <div class="product-info">
-                    <div class="product-name">Lion Crest Pullover <span class="badge">New</span></div>
-                    <div class="product-desc">Embroidered lion head crest. Premium heavyweight cotton.</div>
-                    <div class="product-price">$72.99</div>
-                    <div class="sizes">Sizes: S - XXL</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">🎨</div>
-                <div class="product-info">
-                    <div class="product-name">Abstract Geometrics</div>
-                    <div class="product-desc">Modern abstract shapes in vibrant thread colors.</div>
-                    <div class="product-price">$67.99</div>
-                    <div class="sizes">Sizes: S - XL</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">🌊</div>
-                <div class="product-info">
-                    <div class="product-name">Wave Ocean Pullover</div>
-                    <div class="product-desc">Large wave embroidery. Perfect for beach & coastal vibes.</div>
-                    <div class="product-price">$66.99</div>
-                    <div class="sizes">Sizes: S - XXL</div>
-                </div>
-            </div>
+        <div class="products-grid" id="products">
+            <!-- Products loaded from inventory.js -->
         </div>
     </div>
 
     <footer>
         <p>© 2026 StitchCo. All rights reserved.</p>
     </footer>
+
+    <script src="inventory.js"></script>
+    <script>
+        const hoodies = getProductsByCategory('hoodie');
+        const container = document.getElementById('products');
+        
+        hoodies.forEach(product => {
+            const stockClass = product.stock < 10 ? 'low' : '';
+            const colorsHtml = product.colors.map(c => `<div class="color-dot" style="background:${c}" title="${c}"></div>`).join('');
+            
+            container.innerHTML += `
+                <div class="product-card">
+                    <div class="product-image">${product.emoji}</div>
+                    <div class="product-info">
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-desc">Sizes: ${product.sizes.join(', ')}</div>
+                        <div class="product-price">$${product.price}</div>
+                        <div class="product-stock ${stockClass}">${product.stock > 0 ? '✓ In Stock (' + product.stock + ')' : '✗ Out of Stock'}</div>
+                        <div class="colors">${colorsHtml}</div>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
 </body>
 </html>
