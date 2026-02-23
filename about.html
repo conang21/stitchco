@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | StitchCo.</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f8f8f8; }
+        nav { background: #1a1a1a; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: #e63946; }
+        .page-header { background: linear-gradient(135deg, #2d2d2d, #1a1a1a); color: #fff; padding: 3rem 2rem; text-align: center; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        .story { background: #fff; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .story h2 { color: #e63946; margin-bottom: 1rem; }
+        .values { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .value-card { background: #fff; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .value-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .value-card h3 { margin-bottom: 0.5rem; }
+        .team { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0; }
+        .team-member { background: #fff; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .team-avatar { width: 100px; height: 100px; background: linear-gradient(135deg, #e63946, #ff6b6b); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+        .team-member h3 { margin-bottom: 0.25rem; }
+        .team-member p { color: #666; font-size: 0.9rem; }
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 3rem 0; }
+        .stat { background: #1a1a1a; color: #fff; padding: 1.5rem; text-align: center; border-radius: 12px; }
+        .stat-number { font-size: 2rem; font-weight: bold; color: #e63946; }
+        .stat-label { font-size: 0.85rem; opacity: 0.8; }
+        footer { background: #1a1a1a; color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hats.html">Hats</a></li>
+            <li><a href="tshirts.html">T-Shirts</a></li>
+            <li><a href="hoodies.html">Hoodies</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>👥 About StitchCo.</h1>
+        <p>Crafting premium embroidered apparel since 2024</p>
+    </div>
+
+    <div class="container">
+        <div class="story">
+            <h2>Our Story</h2>
+            <p>StitchCo. started in a small garage in Los Angeles with just one embroidery machine and a dream. We saw that most embroidered apparel on the market either had poor quality or sky-high prices. We wanted to change that.</p>
+            <br>
+            <p>Today, we're a team of passionate designers, machinists, and quality control experts who believe everyone deserves access to premium, beautifully embroidered clothing. Every piece that leaves our shop is made with care, precision, and attention to detail.</p>
+            <br>
+            <p>We're not just making clothes — we're creating wearable art that tells your story.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Garments Embroidered</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Expert Staff</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">24hr</div>
+                <div class="stat-label"> turnaround</div>
+            </div>
+        </div>
+
+        <h2 style="text-align:center;margin:2rem 0;">Our Values</h2>
+        <div class="values">
+            <div class="value-card">
+                <div class="value-icon">🎯</div>
+                <h3>Quality First</h3>
+                <p>We never compromise on materials or craftsmanship. Every stitch counts.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">♻️</div>
+                <h3>Sustainability</h3>
+                <p>Eco-friendly threads and responsible sourcing minimize our environmental impact.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">💬</div>
+                <h3>Transparency</h3>
+                <p>No hidden fees. No surprises. Just honest pricing and clear communication.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <h3>Community</h3>
+                <p>We support local artists and small businesses with fair collaboration rates.</p>
+            </div>
+        </div>
+
+        <h2 style="text-align:center;margin:2rem 0;">Meet Our Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <div class="team-avatar">👨‍💻</div>
+                <h3>Marcus</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <div class="team-avatar">👩‍🎨</div>
+                <h3>Sarah</h3>
+                <p>Head Designer</p>
+            </div>
+            <div class="team-member">
+                <div class="team-avatar">👨‍🔧</div>
+                <h3>David</h3>
+                <p>Production Lead</p>
+            </div>
+            <div class="team-member">
+                <div class="team-avatar">👩‍📞</div>
+                <h3>Lisa</h3>
+                <p>Customer Success</p>
+            </div>
+        </div>
+
+        <div class="story">
+            <h2>Why Choose Us?</h2>
+            <p><strong>Fast Turnaround:</strong> Most orders ship within 24-48 hours.</p>
+            <br>
+            <p><strong>Free Design Help:</strong> Our design team will optimize your artwork for embroidery — free of charge.</p>
+            <br>
+            <p><strong>Low Minimums:</strong> Order as few as 6 pieces for custom orders.</p>
+            <br>
+            <p><strong>Lifetime Guarantee:</strong> If your embroidery ever unravels, we'll fix it for free.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 StitchCo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
