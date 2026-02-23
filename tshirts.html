@@ -68,14 +68,14 @@
             
             product.colors.forEach(color => {
                 const colorStock = getStockForColor(product, color);
-                const stockClass = colorStock < 3 ? (colorStock === 0 ? 'out-of-stock' : 'low-stock') : 'in-stock';
-                const stockLabel = colorStock === 0 ? 'Out' : (colorStock < 3 ? colorStock + ' left' : colorStock);
+                const stockClass = colorStock === 0 ? 'out-of-stock' : 'in-stock';
+                const stockLabel = colorStock === 0 ? 'Out of Stock' : 'In Stock';
                 
                 let sizesHtml = '';
                 product.sizes.forEach(size => {
                     const qty = product.stock[color]?.[size] || 0;
-                    const sizeClass = qty === 0 ? 'out-of-stock' : (qty < 3 ? 'low-stock' : 'in-stock');
-                    sizesHtml += `<span class="size-badge ${sizeClass}">${size} (${qty})</span>`;
+                    const sizeClass = qty === 0 ? 'out-of-stock' : 'in-stock';
+                    sizesHtml += `<span class="size-badge ${sizeClass}">${size}</span>`;
                 });
                 
                 colorsHtml += `
