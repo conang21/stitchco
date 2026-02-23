@@ -1,5 +1,5 @@
 // StitchCo. Inventory Data
-// Easy to edit - just change the values
+// Stock by color and size
 
 const inventory = [
     {
@@ -9,7 +9,11 @@ const inventory = [
         price: 29.99,
         sizes: ["S", "M", "L"],
         colors: ["black", "brown", "navy"],
-        stock: 15,
+        stock: {
+            "black": { "S": 3, "M": 5, "L": 4 },
+            "brown": { "S": 2, "M": 3, "L": 2 },
+            "navy": { "S": 1, "M": 2, "L": 3 }
+        },
         emoji: "🧢"
     },
     {
@@ -19,7 +23,11 @@ const inventory = [
         price: 24.99,
         sizes: ["One Size"],
         colors: ["black", "gray", "navy"],
-        stock: 20,
+        stock: {
+            "black": { "One Size": 8 },
+            "gray": { "One Size": 7 },
+            "navy": { "One Size": 5 }
+        },
         emoji: "🎩"
     },
     {
@@ -29,7 +37,10 @@ const inventory = [
         price: 34.99,
         sizes: ["S", "M", "L"],
         colors: ["olive", "black"],
-        stock: 12,
+        stock: {
+            "olive": { "S": 2, "M": 3, "L": 2 },
+            "black": { "S": 2, "M": 2, "L": 1 }
+        },
         emoji: "🪖"
     },
     {
@@ -39,7 +50,10 @@ const inventory = [
         price: 34.99,
         sizes: ["S", "M", "L", "XL", "XXL"],
         colors: ["white", "gray"],
-        stock: 25,
+        stock: {
+            "white": { "S": 3, "M": 4, "L": 3, "XL": 2, "XXL": 3 },
+            "gray": { "S": 2, "M": 3, "L": 3, "XL": 2, "XXL": 2 }
+        },
         emoji: "🏔️"
     },
     {
@@ -49,7 +63,10 @@ const inventory = [
         price: 32.99,
         sizes: ["S", "M", "L", "XL"],
         colors: ["white", "black"],
-        stock: 18,
+        stock: {
+            "white": { "S": 3, "M": 3, "L": 2, "XL": 2 },
+            "black": { "S": 2, "M": 3, "L": 2, "XL": 3 }
+        },
         emoji: "🦅"
     },
     {
@@ -59,7 +76,10 @@ const inventory = [
         price: 33.99,
         sizes: ["S", "M", "L", "XL"],
         colors: ["white", "gray"],
-        stock: 15,
+        stock: {
+            "white": { "S": 2, "M": 3, "L": 2, "XL": 2 },
+            "gray": { "S": 2, "M": 2, "L": 2, "XL": 2 }
+        },
         emoji: "🐺"
     },
     {
@@ -69,7 +89,10 @@ const inventory = [
         price: 69.99,
         sizes: ["S", "M", "L", "XL"],
         colors: ["black", "gray"],
-        stock: 10,
+        stock: {
+            "black": { "S": 2, "M": 2, "L": 1, "XL": 2 },
+            "gray": { "S": 1, "M": 1, "L": 2, "XL": 1 }
+        },
         emoji: "🔥"
     },
     {
@@ -79,7 +102,10 @@ const inventory = [
         price: 74.99,
         sizes: ["S", "M", "L", "XL"],
         colors: ["black", "red"],
-        stock: 8,
+        stock: {
+            "black": { "S": 1, "M": 2, "L": 1, "XL": 1 },
+            "red": { "S": 1, "M": 1, "L": 1, "XL": 1 }
+        },
         emoji: "🐲"
     },
     {
@@ -89,7 +115,10 @@ const inventory = [
         price: 64.99,
         sizes: ["S", "M", "L"],
         colors: ["black", "purple"],
-        stock: 12,
+        stock: {
+            "black": { "S": 2, "M": 2, "L": 2 },
+            "purple": { "S": 2, "M": 2, "L": 2 }
+        },
         emoji: "🌙"
     },
     {
@@ -99,12 +128,15 @@ const inventory = [
         price: 66.99,
         sizes: ["S", "M", "L", "XL"],
         colors: ["blue", "black"],
-        stock: 14,
+        stock: {
+            "blue": { "S": 2, "M": 3, "L": 2, "XL": 2 },
+            "black": { "S": 2, "M": 2, "L": 2, "XL": 1 }
+        },
         emoji: "🌊"
     }
 ];
 
-// Functions to use with the website
+// Helper functions
 function getProductsByCategory(category) {
     return inventory.filter(p => p.category === category);
 }
@@ -113,6 +145,21 @@ function getProductById(id) {
     return inventory.find(p => p.id === id);
 }
 
-function getTotalStock() {
-    return inventory.reduce((sum, p) => sum + p.stock, 0);
+function getTotalStock(product) {
+    let total = 0;
+    for (let color in product.stock) {
+        for (let size in product.stock[color]) {
+            total += product.stock[color][size];
+        }
+    }
+    return total;
+}
+
+function getStockForColor(product, color) {
+    if (!product.stock[color]) return 0;
+    let total = 0;
+    for (let size in product.stock[color]) {
+        total += product.stock[color][size];
+    }
+    return total;
 }

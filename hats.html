@@ -13,21 +13,23 @@
         nav a:hover, nav a.active { color: #e63946; }
         .page-header { background: linear-gradient(135deg, #2d2d2d, #1a1a1a); color: #fff; padding: 3rem 2rem; text-align: center; }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
         .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
         .product-card:hover { transform: translateY(-5px); }
-        .product-image { height: 220px; background: linear-gradient(145deg, #e8e8e8, #f0f0f0); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+        .product-image { height: 180px; background: linear-gradient(145deg, #e8e8e8, #f0f0f0); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
         .product-info { padding: 1.5rem; }
         .product-name { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .product-desc { color: #666; font-size: 0.9rem; margin-bottom: 0.5rem; }
-        .product-price { font-size: 1.3rem; font-weight: bold; color: #e63946; margin-bottom: 0.5rem; }
-        .product-stock { font-size: 0.85rem; color: #27ae60; margin-bottom: 0.5rem; }
-        .product-stock.low { color: #e63946; }
-        .badge { display: inline-block; background: #e63946; color: #fff; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; margin-left: 0.5rem; }
-        .colors { display: flex; gap: 0.5rem; margin: 0.5rem 0; flex-wrap: wrap; }
-        .color-dot { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #ddd; }
-        .sizes { font-size: 0.85rem; color: #666; }
-        footer { background: #1a1a1a; color text-align: center: #fff;; padding: 2rem; margin-top: 4rem; }
+        .product-price { font-size: 1.3rem; font-weight: bold; color: #e63946; margin-bottom: 1rem; }
+        .section-label { font-size: 0.75rem; text-transform: uppercase; color: #888; margin-bottom: 0.5rem; letter-spacing: 1px; }
+        .color-section { margin-bottom: 1rem; }
+        .color-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+        .color-dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #ddd; flex-shrink: 0; }
+        .color-name { font-size: 0.9rem; font-weight: 500; min-width: 60px; }
+        .size-badge { display: inline-block; padding: 2px 8px; margin: 2px; border-radius: 4px; font-size: 0.8rem; background: #f0f0f0; }
+        .size-badge.in-stock { background: #27ae60; color: #fff; }
+        .size-badge.low-stock { background: #f39c12; color: #fff; }
+        .size-badge.out-of-stock { background: #ddd; color: #888; text-decoration: line-through; }
+        footer { background: #1a1a1a; color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
     </style>
 </head>
 <body>
@@ -49,9 +51,7 @@
     </div>
 
     <div class="container">
-        <div class="products-grid" id="products">
-            <!-- Products loaded from inventory.js -->
-        </div>
+        <div class="products-grid" id="products"></div>
     </div>
 
     <footer>
@@ -64,18 +64,40 @@
         const container = document.getElementById('products');
         
         hats.forEach(product => {
-            const stockClass = product.stock < 10 ? 'low' : '';
-            const colorsHtml = product.colors.map(c => `<div class="color-dot" style="background:${c}" title="${c}"></div>`).join('');
+            let colorsHtml = '';
+            
+            product.colors.forEach(color => {
+                const colorStock = getStockForColor(product, color);
+                const stockClass = colorStock < 3 ? (colorStock === 0 ? 'out-of-stock' : 'low-stock') : 'in-stock';
+                const stockLabel = colorStock === 0 ? 'Out' : (colorStock < 3 ? colorStock + ' left' : colorStock);
+                
+                let sizesHtml = '';
+                product.sizes.forEach(size => {
+                    const qty = product.stock[color]?.[size] || 0;
+                    const sizeClass = qty === 0 ? 'out-of-stock' : (qty < 3 ? 'low-stock' : 'in-stock');
+                    sizesHtml += `<span class="size-badge ${sizeClass}">${size} (${qty})</span>`;
+                });
+                
+                colorsHtml += `
+                    <div class="color-section">
+                        <div class="color-row">
+                            <div class="color-dot" style="background:${color}"></div>
+                            <span class="color-name">${color}</span>
+                            <span class="size-badge ${stockClass}">${stockLabel}</span>
+                        </div>
+                        <div>${sizesHtml}</div>
+                    </div>
+                `;
+            });
             
             container.innerHTML += `
                 <div class="product-card">
                     <div class="product-image">${product.emoji}</div>
                     <div class="product-info">
                         <div class="product-name">${product.name}</div>
-                        <div class="product-desc">Sizes: ${product.sizes.join(', ')}</div>
                         <div class="product-price">$${product.price}</div>
-                        <div class="product-stock ${stockClass}">${product.stock > 0 ? '✓ In Stock (' + product.stock + ')' : '✗ Out of Stock'}</div>
-                        <div class="colors">${colorsHtml}</div>
+                        <div class="section-label">Sizes & Stock</div>
+                        ${colorsHtml}
                     </div>
                 </div>
             `;
