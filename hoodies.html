@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoodies | StitchCo.</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f8f8f8; }
+        nav { background: #1a1a1a; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: #e63946; }
+        .page-header { background: linear-gradient(135deg, #2d2d2d, #1a1a1a); color: #fff; padding: 3rem 2rem; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-image { height: 220px; background: linear-gradient(145deg, #e8e8e8, #f0f0f0); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+        .product-info { padding: 1.5rem; }
+        .product-name { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .product-desc { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+        .product-price { font-size: 1.3rem; font-weight: bold; color: #e63946; }
+        .badge { display: inline-block; background: #e63946; color: #fff; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; margin-left: 0.5rem; }
+        .sizes { margin-top: 0.5rem; font-size: 0.85rem; color: #666; }
+        footer { background: #1a1a1a; color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hats.html">Hats</a></li>
+            <li><a href="tshirts.html">T-Shirts</a></li>
+            <li><a href="hoodies.html" class="active">Hoodies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>🧥 Embroidered Hoodies</h1>
+        <p>Heavyweight comfort with bold embroidery</p>
+    </div>
+
+    <div class="container">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">🔥</div>
+                <div class="product-info">
+                    <div class="product-name">Flame Graphic Hoodie <span class="badge">Bestseller</span></div>
+                    <div class="product-desc">Oversized fit. Large front & back embroidery with flame design.</div>
+                    <div class="product-price">$69.99</div>
+                    <div class="sizes">Sizes: S - XXL</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🐲</div>
+                <div class="product-info">
+                    <div class="product-name">Dragon Yin Yang</div>
+                    <div class="product-desc">Heavyweight fleece. Intricate dragon embroidery on back.</div>
+                    <div class="product-price">$74.99</div>
+                    <div class="sizes">Sizes: M - XL</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🌙</div>
+                <div class="product-info">
+                    <div class="product-name">Celestial Moon Hoodie</div>
+                    <div class="product-desc">Puff embroidery of moon phases & stars. Ultra-soft inside.</div>
+                    <div class="product-price">$64.99</div>
+                    <div class="sizes">Sizes: S - XL</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🦁</div>
+                <div class="product-info">
+                    <div class="product-name">Lion Crest Pullover <span class="badge">New</span></div>
+                    <div class="product-desc">Embroidered lion head crest. Premium heavyweight cotton.</div>
+                    <div class="product-price">$72.99</div>
+                    <div class="sizes">Sizes: S - XXL</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🎨</div>
+                <div class="product-info">
+                    <div class="product-name">Abstract Geometrics</div>
+                    <div class="product-desc">Modern abstract shapes in vibrant thread colors.</div>
+                    <div class="product-price">$67.99</div>
+                    <div class="sizes">Sizes: S - XL</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🌊</div>
+                <div class="product-info">
+                    <div class="product-name">Wave Ocean Pullover</div>
+                    <div class="product-desc">Large wave embroidery. Perfect for beach & coastal vibes.</div>
+                    <div class="product-price">$66.99</div>
+                    <div class="sizes">Sizes: S - XXL</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 StitchCo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
