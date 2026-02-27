@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog - Tips, guides, and insights about embroidery from StitchCo.">
+    <meta name="keywords" content="blog, embroidery tips, guides, StitchCo">
+    <title>Blog | StitchCo.</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f8f8f8; }
+        nav { background: #1a1a1a; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: #e63946; }
+        
+        /* Dropdown Navigation */
+        .nav-dropdown { position: relative; }
+        .nav-dropdown > a:after { content: ' ▾'; }
+        .nav-dropdown-content {
+            display: none;
+            position: absolute;
+            background: #2d2d2d;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0.5rem 0;
+            z-index: 1000;        .nav-dropdown:hover > .nav-dropdown-content { display: block !important; }
+        .nav-dropdown-content li { display: block; }
+        .nav-dropdown-content a { display: block; padding: 0.5rem 1rem; white-space: nowrap; }
+        .nav-dropdown-content a:hover { background: #e63946; }
+        
+        .page-header { background: linear-gradient(135deg, #2d2d2d, #1a1a1a); color: #fff; padding: 3rem 2rem; text-align: center; }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        
+        .intro { text-align: center; margin-bottom: 3rem; }
+        .intro p { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; }
+        
+        .post-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 2rem; transition: transform 0.3s; }
+        .post-card:hover { transform: translateY(-5px); }
+        .post-content { padding: 2rem; }
+        .post-date { color: #888; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .post-title { font-size: 1.5rem; margin-bottom: 0.75rem; }
+        .post-title a { color: #1a1a1a; text-decoration: none; }
+        .post-title a:hover { color: #e63946; }
+        .post-excerpt { color: #666; margin-bottom: 1rem; line-height: 1.7; }
+        .post-read-more { color: #e63946; text-decoration: none; font-weight: 600; }
+        .post-read-more:hover { text-decoration: underline; }
+        
+        footer { background: #1a1a1a; color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="nav-dropdown">
+                <a href="hats.html">Products ▾</a>
+                <ul class="nav-dropdown-content">
+                    <li><a href="hats.html">Hats</a></li>
+                    <li><a href="tshirts.html">T-Shirts</a></li>
+                    <li><a href="hoodies.html">Hoodies</a></li>
+                    <li><a href="bags.html">Bags</a></li>
+                    <li><a href="jackets.html">Jackets</a></li>
+                    <li><a href="uniforms.html">Uniforms</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>📝 Blog</h1>
+        <p>Tips, guides, and insights about embroidery</p>
+    </div>
+
+    <div class="container">
+        <div class="intro">
+            <p>Stay updated with the latest tips, guides, and insights about custom embroidery. From care instructions to sizing guides, we've got you covered.</p>
+        </div>
+
+        <div class="post-card">
+            <div class="post-content">
+                <div class="post-date">February 27, 2026</div>
+                <h2 class="post-title"><a href="blog/care-for-embroidered-clothes.html">How to Care for Embroidered Clothes</a></h2>
+                <p class="post-excerpt">Investing in custom embroidery means you want your garments to last. With proper care, embroidered items can maintain their beauty for years. Here are our expert tips on caring for your embroidered clothing...</p>
+                <a href="blog/care-for-embroidered-clothes.html" class="post-read-more">Read More →</a>
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-content">
+                <div class="post-date">February 27, 2026</div>
+                <h2 class="post-title"><a href="blog/logo-sizing-guide.html">Logo Sizing Guide for Embroidery</a></h2>
+                <p class="post-excerpt">Getting the right logo size is crucial for embroidery. Too small and your design gets lost. Too big and it looks overwhelming. This guide will help you choose the perfect size for every garment type...</p>
+                <a href="blog/logo-sizing-guide.html" class="post-read-more">Read More →</a>
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-content">
+                <div class="post-date">February 27, 2026</div>
+                <h2 class="post-title"><a href="blog/restaurant-uniforms.html">Custom Restaurant Uniforms: The Complete Guide</a></h2>
+                <p class="post-excerpt">Your restaurant's appearance speaks volumes about your brand. Custom embroidered uniforms create a professional, cohesive look that impresses customers and builds brand recognition...</p>
+                <a href="blog/restaurant-uniforms.html" class="post-read-more">Read More →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 StitchCo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
