@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop embroidered hats at StitchCo. - Dad hats, beanies, bucket hats. Premium quality, custom designs, multiple colors available.">
-    <meta name="keywords" content="embroidered hats, dad hat, beanie, bucket hat, StitchCo, custom caps">
+    <meta name="description" content="Explore our collection of embroidered hats - dad hats, structured caps, beanies, bucket hats, and more. Custom designs available.">
+    <meta name="keywords" content="embroidered hats, dad hats, structured caps, beanies, bucket hats, custom caps, StitchCo">
     <title>Embroidered Hats | StitchCo.</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -14,23 +14,22 @@
         nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
         nav a:hover, nav a.active { color: #e63946; }
         .page-header { background: linear-gradient(135deg, #2d2d2d, #1a1a1a); color: #fff; padding: 3rem 2rem; text-align: center; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-        .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .product-card:hover { transform: translateY(-5px); }
-        .product-image { height: 180px; background: linear-gradient(145deg, #e8e8e8, #f0f0f0); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
-        .product-info { padding: 1.5rem; }
-        .product-name { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .product-price { font-size: 1.3rem; font-weight: bold; color: #e63946; margin-bottom: 1rem; }
-        .section-label { font-size: 0.75rem; text-transform: uppercase; color: #888; margin-bottom: 0.5rem; letter-spacing: 1px; }
-        .color-section { margin-bottom: 1rem; }
-        .color-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
-        .color-dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #ddd; flex-shrink: 0; }
-        .color-name { font-size: 0.9rem; font-weight: 500; min-width: 60px; }
-        .size-badge { display: inline-block; padding: 2px 8px; margin: 2px; border-radius: 4px; font-size: 0.8rem; background: #f0f0f0; }
-        .size-badge.in-stock { background: #27ae60; color: #fff; }
-        .size-badge.low-stock { background: #f39c12; color: #fff; }
-        .size-badge.out-of-stock { background: #ddd; color: #888; text-decoration: line-through; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        .intro { text-align: center; margin-bottom: 3rem; }
+        .intro p { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; }
+        .hat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .hat-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .hat-card:hover { transform: translateY(-5px); }
+        .hat-image { height: 200px; background: linear-gradient(145deg, #e8e8e8, #f5f5f5); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+        .hat-info { padding: 1.5rem; }
+        .hat-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: #1a1a1a; }
+        .hat-desc { color: #666; margin-bottom: 1rem; line-height: 1.6; }
+        .hat-features { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .feature-tag { background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; color: #555; }
+        .cta-section { text-align: center; margin-top: 4rem; padding: 2rem; background: #fff; border-radius: 16px; }
+        .cta-section h3 { margin-bottom: 1rem; }
+        .cta-section a { display: inline-block; background: #e63946; color: #fff; padding: 1rem 2rem; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform 0.3s; }
+        .cta-section a:hover { transform: scale(1.05); }
         footer { background: #1a1a1a; color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
     </style>
 </head>
@@ -42,69 +41,137 @@
             <li><a href="tshirts.html">T-Shirts</a></li>
             <li><a href="hoodies.html">Hoodies</a></li>
             <li><a href="process.html">Process</a></li>
-            <li><a href="faq.html">FAQ</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <div class="page-header">
         <h1>🧢 Embroidered Hats</h1>
-        <p>Premium caps with handcrafted embroidery</p>
+        <p>Premium caps crafted with precision</p>
     </div>
 
     <div class="container">
-        <div class="products-grid" id="products"></div>
+        <div class="intro">
+            <p>We offer a wide variety of hat styles, each customizable with your own logo or design. Every hat is embroidered with high-quality thread for lasting results.</p>
+        </div>
+
+        <div class="hat-grid">
+            <div class="hat-card">
+                <div class="hat-image">🧢</div>
+                <div class="hat-info">
+                    <div class="hat-name">Dad Hats</div>
+                    <div class="hat-desc">The classic unstructured cap with a curved brim. Relaxed fit that sits slightly higher on the head. Perfect for everyday wear and casual branding.</div>
+                    <div class="hat-features">
+                        <span class="feature-tag">Unstructured</span>
+                        <span class="feature-tag">Curved Brim</span>
+                        <span class="feature-tag">Cotton Twill</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hat-card">
+                <div class="hat-image">🎩</div>
+                <div class="hat-info">
+                    <div class="hat-name">Structured Caps</div>
+                    <div class="hat-desc">Medium to high profile caps with a stiff front panel. Maintains shape well and offers a more polished, athletic look. Great for corporate branding.</div>
+                    <div class="hat-features">
+                        <span class="feature-tag">Structured</span>
+                        <span class="feature-tag">High Profile</span>
+                        <span class="feature-tag">Firm Crown</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hat-card">
+                <div class="hat-image">🪖</div>
+                <div class="hat-info">
+                    <div class="hat-name">Bucket Hats</div>
+                    <div class="hat-desc">Soft-sided hats with a wide, downward-sloping brim. Trending style perfect for festivals, outdoor events, and streetwear brands.</div>
+                    <div class="hat-features">
+                        <span class="feature-tag">Wide Brim</span>
+                        <span class="feature-tag">All-Weather</span>
+                        <span class="feature-tag">Soft Crown</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hat-card">
+                <div class="hat-image">🧶</div>
+                <div class="hat-info">
+                    <div class="hat-name">Beanies</div>
+                    <div class="hat-desc">Knitted wool or acrylic hats for cold weather. Available in cuffed or slouchy styles. Perfect for winter collections and outdoor brands.</div>
+                    <div class="hat-features">
+                        <span class="feature-tag">Knitted</span>
+                        <span class="feature-tag">Winter</span>
+                        <span class="feature-tag">Warm</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hat-card">
+                <div class="hat-image">👒</div>
+                <div class="hat-info">
+                    <div class="hat-name">Snapbacks</div>
+                    <div class="hat-desc">Flat brim caps with a plastic snap closure. Adjustable sizing and bold, flat brim design. Popular in hip-hop and streetwear culture.</div>
+                    <div class="hat-features">
+                        <span class="feature-tag">Flat Brim</span>
+                        <span class="feature-tag">Adjustable</span>
+                        <span class="feature-tag">Bold Look</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hat-card">
+                <div class="hat-image">🎨</div>
+                <div class="hat-info">
+                    <div class="hat-name">Trucker Mesh</div>
+                    <div class="hat-desc">Classic mesh-back caps with foam front. Lightweight and breathable, perfect for summer and outdoor sports events.</div>
+                    <div class="hat-features">
+                        <span class="feature-tag">Mesh Back</span>
+                        <span class="feature-tag">Foam Front</span>
+                        <span class="feature-tag">Breathable</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hat-card">
+                <div class="hat-image">🧢</div>
+                <div class="hat-info">
+                    <div class="hat-name">Flexfit / Fitted</div>
+                    <div class="hat-description">Premium fitted caps without a buckle. Stretchable wool blend crown that conforms to your head. Sleek, modern look.</div>
+                    <div class="hat-features">
+                        <span class="feature-tag">Fitted</span>
+                        <span class="feature-tag">Stretch</span>
+                        <span class="feature-tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hat-card">
+                <div class="hat-image">🏃</div>
+                <div class="hat-info">
+                    <div class="hat-name">Running Caps</div>
+                    <div class="hat-desc">Lightweight, breathable caps designed for athletic use. Moisture-wicking fabric with reflective details for night running.</div>
+                    <div class="hat-features">
+                        <span class="feature-tag">Lightweight</span>
+                        <span class="feature-tag">Moisture-Wicking</span>
+                        <span class="feature-tag">Athletic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Want to customize your hats?</h3>
+            <p style="margin-bottom:1rem;color:#666;">Contact us to discuss your custom embroidery project. We'll help bring your vision to life!</p>
+            <a href="contact.html">Get a Quote →</a>
+        </div>
     </div>
 
     <footer>
         <p>© 2026 StitchCo. All rights reserved.</p>
     </footer>
-
-    <script src="inventory.js"></script>
-    <script>
-        const hats = getProductsByCategory('hat');
-        const container = document.getElementById('products');
-        
-        hats.forEach(product => {
-            let colorsHtml = '';
-            
-            product.colors.forEach(color => {
-                const colorStock = getStockForColor(product, color);
-                const stockClass = colorStock === 0 ? 'out-of-stock' : 'in-stock';
-                const stockLabel = colorStock === 0 ? 'Out of Stock' : 'In Stock';
-                
-                let sizesHtml = '';
-                product.sizes.forEach(size => {
-                    const qty = product.stock[color]?.[size] || 0;
-                    const sizeClass = qty === 0 ? 'out-of-stock' : 'in-stock';
-                    sizesHtml += `<span class="size-badge ${sizeClass}">${size}</span>`;
-                });
-                
-                colorsHtml += `
-                    <div class="color-section">
-                        <div class="color-row">
-                            <div class="color-dot" style="background:${color}"></div>
-                            <span class="color-name">${color}</span>
-                            <span class="size-badge ${stockClass}">${stockLabel}</span>
-                        </div>
-                        <div>${sizesHtml}</div>
-                    </div>
-                `;
-            });
-            
-            container.innerHTML += `
-                <div class="product-card">
-                    <div class="product-image">${product.emoji}</div>
-                    <div class="product-info">
-                        <div class="product-name">${product.name}</div>
-                        <div class="product-price">$${product.price}</div>
-                        <div class="section-label">Sizes & Stock</div>
-                        ${colorsHtml}
-                    </div>
-                </div>
-            `;
-        });
-    </script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop embroidered t-shirts at StitchCo. - Mountain, eagle, wolf designs. Premium cotton, custom embroidery, multiple sizes.">
-    <meta name="keywords" content="embroidered t-shirts, custom tees, StitchCo, graphic t-shirts, premium cotton">
+    <meta name="description" content="Explore our collection of embroidered t-shirts - crew neck, v-neck, long sleeve, tank tops, and more. Premium quality custom apparel.">
+    <meta name="keywords" content="embroidered t-shirts, crew neck, v-neck, long sleeve, tank top, custom tees, StitchCo">
     <title>Embroidered T-Shirts | StitchCo.</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -14,23 +14,22 @@
         nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
         nav a:hover, nav a.active { color: #e63946; }
         .page-header { background: linear-gradient(135deg, #2d2d2d, #1a1a1a); color: #fff; padding: 3rem 2rem; text-align: center; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-        .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .product-card:hover { transform: translateY(-5px); }
-        .product-image { height: 180px; background: linear-gradient(145deg, #e8e8e8, #f0f0f0); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
-        .product-info { padding: 1.5rem; }
-        .product-name { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .product-price { font-size: 1.3rem; font-weight: bold; color: #e63946; margin-bottom: 1rem; }
-        .section-label { font-size: 0.75rem; text-transform: uppercase; color: #888; margin-bottom: 0.5rem; letter-spacing: 1px; }
-        .color-section { margin-bottom: 1rem; }
-        .color-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
-        .color-dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #ddd; flex-shrink: 0; }
-        .color-name { font-size: 0.9rem; font-weight: 500; min-width: 60px; }
-        .size-badge { display: inline-block; padding: 2px 8px; margin: 2px; border-radius: 4px; font-size: 0.8rem; background: #f0f0f0; }
-        .size-badge.in-stock { background: #27ae60; color: #fff; }
-        .size-badge.low-stock { background: #f39c12; color: #fff; }
-        .size-badge.out-of-stock { background: #ddd; color: #888; text-decoration: line-through; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        .intro { text-align: center; margin-bottom: 3rem; }
+        .intro p { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; }
+        .shirt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .shirt-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .shirt-card:hover { transform: translateY(-5px); }
+        .shirt-image { height: 200px; background: linear-gradient(145deg, #e8e8e8, #f5f5f5); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+        .shirt-info { padding: 1.5rem; }
+        .shirt-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: #1a1a1a; }
+        .shirt-desc { color: #666; margin-bottom: 1rem; line-height: 1.6; }
+        .shirt-features { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .feature-tag { background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; color: #555; }
+        .cta-section { text-align: center; margin-top: 4rem; padding: 2rem; background: #fff; border-radius: 16px; }
+        .cta-section h3 { margin-bottom: 1rem; }
+        .cta-section a { display: inline-block; background: #e63946; color: #fff; padding: 1rem 2rem; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform 0.3s; }
+        .cta-section a:hover { transform: scale(1.05); }
         footer { background: #1a1a1a; color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
     </style>
 </head>
@@ -42,69 +41,137 @@
             <li><a href="tshirts.html" class="active">T-Shirts</a></li>
             <li><a href="hoodies.html">Hoodies</a></li>
             <li><a href="process.html">Process</a></li>
-            <li><a href="faq.html">FAQ</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <div class="page-header">
         <h1>👕 Embroidered T-Shirts</h1>
-        <p>Premium cotton with detailed embroidery</p>
+        <p>Premium styles for every occasion</p>
     </div>
 
     <div class="container">
-        <div class="products-grid" id="products"></div>
+        <div class="intro">
+            <p>From classic basics to trendy cuts, we offer a variety of t-shirt styles to suit your brand. Each piece is crafted with attention to detail and quality.</p>
+        </div>
+
+        <div class="shirt-grid">
+            <div class="shirt-card">
+                <div class="shirt-image">👕</div>
+                <div class="shirt-info">
+                    <div class="shirt-name">Classic Crew Neck</div>
+                    <div class="shirt-desc">The timeless essential. Round neck with a relaxed fit. Perfect for everyday wear, events, and corporate branding. Available in cotton and blends.</div>
+                    <div class="shirt-features">
+                        <span class="feature-tag">Relaxed Fit</span>
+                        <span class="feature-tag">Cotton</span>
+                        <span class="feature-tag">Everyday</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shirt-card">
+                <div class="shirt-image">💃</div>
+                <div class="shirt-info">
+                    <div class="shirt-name">V-Neck</div>
+                    <div class="shirt-desc">A more stylish alternative to crew necks. V-shaped neckline adds visual interest. Great for layering or wearing on its own.</div>
+                    <div class="shirt-features">
+                        <span class="feature-tag">V-Shaped</span>
+                        <span class="feature-tag">Stylish</span>
+                        <span class="feature-tag">Layering</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shirt-card">
+                <div class="shirt-image">🏃</div>
+                <div class="shirt-info">
+                    <div class="shirt-name">Long Sleeve</div>
+                    <div class="shirt-desc">Full sleeve coverage for cooler weather. Perfect for fall and winter collections. Also great for additional embroidery space.</div>
+                    <div class="shirt-features">
+                        <span class="feature-tag">Full Sleeve</span>
+                        <span class="feature-tag">Fall/Winter</span>
+                        <span class="feature-tag">More Space</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shirt-card">
+                <div class="shirt-image">🏊</div>
+                <div class="shirt-info">
+                    <div class="shirt-name">Tank Top / Muscle</div>
+                    <div class="shirt-desc">Sleeveless design for summer and activewear. Popular for gyms, beaches, and hot weather events. Maximum breathability.</div>
+                    <div class="shirt-features">
+                        <span class="feature-tag">Sleeveless</span>
+                        <span class="feature-tag">Summer</span>
+                        <span class="feature-tag">Activewear</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shirt-card">
+                <div class="shirt-image">👔</div>
+                <div class="shirt-info">
+                    <div class="shirt-name">Polo Shirt</div>
+                    <div class="shirt-desc">Collared golf/polo style with buttons. More polished than t-shirts, great for corporate, restaurants, and sports teams.</div>
+                    <div class="shirt-features">
+                        <span class="feature-tag">Collared</span>
+                        <span class="feature-tag">Buttons</span>
+                        <span class="feature-tag">Corporate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shirt-card">
+                <div class="shirt-image">👨‍👦</div>
+                <div class="shirt-info">
+                    <div class="shirt-name">Oversized / Boxy</div>
+                    <div class="shirt-desc">Modern loose-fit silhouette with wider shoulders and longer length. Trending in streetwear and urban fashion.</div>
+                    <div class="shirt-features">
+                        <span class="feature-tag">Loose Fit</span>
+                        <span class="feature-tag">Streetwear</span>
+                        <span class="feature-tag">Modern</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shirt-card">
+                <div class="shirt-image">👶</div>
+                <div class="shirt-info">
+                    <div class="shirt-name">Youth / Kids</div>
+                    <div class="shirt-desc">Designed for younger wearers. Softer fabrics and easier-to-wear cuts. Perfect for kids' brands, teams, and events.</div>
+                    <div class="shirt-features">
+                        <span class="feature-tag">Kids Size</span>
+                        <span class="feature-tag">Soft Fabric</span>
+                        <span class="feature-tag">Comfort</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shirt-card">
+                <div class="shirt-image">🤰</div>
+                <div class="shirt-info">
+                    <div class="shirt-name">Pregnancy / Maternity</div>
+                    <div class="shirt-desc">Specialized cuts for expecting mothers. Stretchy fabrics and comfortable fits designed to grow with your bump.</div>
+                    <div class="shirt-features">
+                        <span class="feature-tag">Stretchy</span>
+                        <span class="feature-tag">Comfort</span>
+                        <span class="feature-tag">Maternity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Ready to create custom t-shirts?</h3>
+            <p style="margin-bottom:1rem;color:#666;">Contact us with your design ideas and we'll help bring them to life!</p>
+            <a href="contact.html">Get a Quote →</a>
+        </div>
     </div>
 
     <footer>
         <p>© 2026 StitchCo. All rights reserved.</p>
     </footer>
-
-    <script src="inventory.js"></script>
-    <script>
-        const tshirts = getProductsByCategory('tshirt');
-        const container = document.getElementById('products');
-        
-        tshirts.forEach(product => {
-            let colorsHtml = '';
-            
-            product.colors.forEach(color => {
-                const colorStock = getStockForColor(product, color);
-                const stockClass = colorStock === 0 ? 'out-of-stock' : 'in-stock';
-                const stockLabel = colorStock === 0 ? 'Out of Stock' : 'In Stock';
-                
-                let sizesHtml = '';
-                product.sizes.forEach(size => {
-                    const qty = product.stock[color]?.[size] || 0;
-                    const sizeClass = qty === 0 ? 'out-of-stock' : 'in-stock';
-                    sizesHtml += `<span class="size-badge ${sizeClass}">${size}</span>`;
-                });
-                
-                colorsHtml += `
-                    <div class="color-section">
-                        <div class="color-row">
-                            <div class="color-dot" style="background:${color}"></div>
-                            <span class="color-name">${color}</span>
-                            <span class="size-badge ${stockClass}">${stockLabel}</span>
-                        </div>
-                        <div>${sizesHtml}</div>
-                    </div>
-                `;
-            });
-            
-            container.innerHTML += `
-                <div class="product-card">
-                    <div class="product-image">${product.emoji}</div>
-                    <div class="product-info">
-                        <div class="product-name">${product.name}</div>
-                        <div class="product-price">$${product.price}</div>
-                        <div class="section-label">Sizes & Stock</div>
-                        ${colorsHtml}
-                    </div>
-                </div>
-            `;
-        });
-    </script>
 </body>
 </html>

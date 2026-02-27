@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shop embroidered hoodies at StitchCo. - Flame, dragon, moon designs. Premium heavyweight quality, custom embroidery.">
-    <meta name="keywords" content="embroidered hoodies, custom hoodies, StitchCo, pullover, heavyweight hoodie">
+    <meta name="description" content="Explore our collection of embroidered hoodies - pullover, zip-up, crop tops, oversized, and more. Premium quality custom apparel.">
+    <meta name="keywords" content="embroidered hoodies, pullover, zip-up hoodie, crop hoodie, oversized hoodie, custom hoodies, StitchCo">
     <title>Embroidered Hoodies | StitchCo.</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -14,23 +14,22 @@
         nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
         nav a:hover, nav a.active { color: #e63946; }
         .page-header { background: linear-gradient(135deg, #2d2d2d, #1a1a1a); color: #fff; padding: 3rem 2rem; text-align: center; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-        .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .product-card:hover { transform: translateY(-5px); }
-        .product-image { height: 180px; background: linear-gradient(145deg, #e8e8e8, #f0f0f0); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
-        .product-info { padding: 1.5rem; }
-        .product-name { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .product-price { font-size: 1.3rem; font-weight: bold; color: #e63946; margin-bottom: 1rem; }
-        .section-label { font-size: 0.75rem; text-transform: uppercase; color: #888; margin-bottom: 0.5rem; letter-spacing: 1px; }
-        .color-section { margin-bottom: 1rem; }
-        .color-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
-        .color-dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #ddd; flex-shrink: 0; }
-        .color-name { font-size: 0.9rem; font-weight: 500; min-width: 60px; }
-        .size-badge { display: inline-block; padding: 2px 8px; margin: 2px; border-radius: 4px; font-size: 0.8rem; background: #f0f0f0; }
-        .size-badge.in-stock { background: #27ae60; color: #fff; }
-        .size-badge.low-stock { background: #f39c12; color: #fff; }
-        .size-badge.out-of-stock { background: #ddd; color: #888; text-decoration: line-through; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        .intro { text-align: center; margin-bottom: 3rem; }
+        .intro p { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; }
+        .hoodie-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .hoodie-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .hoodie-card:hover { transform: translateY(-5px); }
+        .hoodie-image { height: 200px; background: linear-gradient(145deg, #e8e8e8, #f5f5f5); display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+        .hoodie-info { padding: 1.5rem; }
+        .hoodie-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: #1a1a1a; }
+        .hoodie-desc { color: #666; margin-bottom: 1rem; line-height: 1.6; }
+        .hoodie-features { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .feature-tag { background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; color: #555; }
+        .cta-section { text-align: center; margin-top: 4rem; padding: 2rem; background: #fff; border-radius: 16px; }
+        .cta-section h3 { margin-bottom: 1rem; }
+        .cta-section a { display: inline-block; background: #e63946; color: #fff; padding: 1rem 2rem; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform 0.3s; }
+        .cta-section a:hover { transform: scale(1.05); }
         footer { background: #1a1a1a; color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
     </style>
 </head>
@@ -42,69 +41,137 @@
             <li><a href="tshirts.html">T-Shirts</a></li>
             <li><a href="hoodies.html" class="active">Hoodies</a></li>
             <li><a href="process.html">Process</a></li>
-            <li><a href="faq.html">FAQ</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <div class="page-header">
         <h1>🧥 Embroidered Hoodies</h1>
-        <p>Heavyweight comfort with bold embroidery</p>
+        <p>Premium quality for comfort and style</p>
     </div>
 
     <div class="container">
-        <div class="products-grid" id="products"></div>
+        <div class="intro">
+            <p>From lightweight layers to heavy-duty warmth, we offer a variety of hoodie styles. Perfect for branding, teams, or personal use.</p>
+        </div>
+
+        <div class="hoodie-grid">
+            <div class="hoodie-card">
+                <div class="hoodie-image">🔥</div>
+                <div class="hoodie-info">
+                    <div class="hoodie-name">Pullover Hoodie</div>
+                    <div class="hoodie-desc">The classic hoodie with a front pocket (kangaroo pocket). Slip-on design with no zipper. Perfect for casual wear and easy embroidery placement.</div>
+                    <div class="hoodie-features">
+                        <span class="feature-tag">No Zipper</span>
+                        <span class="feature-tag">Pocket</span>
+                        <span class="feature-tag">Casual</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hoodie-card">
+                <div class="hoodie-image">🚪</div>
+                <div class="hoodie-info">
+                    <div class="hoodie-name">Zip-Up Hoodie</div>
+                    <div class="hoodie-desc">Full zipper from bottom to hood. Easy to put on and take off. Great for layering and allows for half-zip styling options.</div>
+                    <div class="hoodie-features">
+                        <span class="feature-tag">Full Zipper</span>
+                        <span class="feature-tag">Layering</span>
+                        <span class="feature-tag">Versatile</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hoodie-card">
+                <div class="hoodie-image">👚</div>
+                <div class="hoodie-info">
+                    <div class="hoodie-name">Crop Hoodie</div>
+                    <div name="hoodie-desc">Shorter length that hits above the waist. Trending style in streetwear and athleisure. Pairs great with high-waisted pants.</div>
+                    <div class="hoodie-features">
+                        <span class="feature-tag">Short Length</span>
+                        <span class="feature-tag">Streetwear</span>
+                        <span class="feature-tag">Trendy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hoodie-card">
+                <div class="hoodie-image">🧸</div>
+                <div class="hoodie-info">
+                    <div class="hoodie-name">Oversized / Slouchy</div>
+                    <div class="hoodie-desc">Extra loose fit with dropped shoulders and extra fabric. The ultimate cozy look. Perfect for loungewear and modern streetwear.</div>
+                    <div class="hoodie-features">
+                        <span class="feature-tag">Loose Fit</span>
+                        <span class="feature-tag">Dropped Shoulders</span>
+                        <span class="feature-tag">Cozy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hoodie-card">
+                <div class="hoodie-image">💪</div>
+                <div class="hoodie-info">
+                    <div class="hoodie-name">Athletic / Performance</div>
+                    <div class="hoodie-desc">Lightweight moisture-wicking fabric for workouts. Features thumb holes, zip pockets, and sporty details. Great for fitness brands.</div>
+                    <div class="hoodie-features">
+                        <span class="feature-tag">Lightweight</span>
+                        <span class="feature-tag">Moisture-Wicking</span>
+                        <span class="feature-tag">Sporty</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hoodie-card">
+                <div class="hoodie-image">🧥</div>
+                <div class="hoodie-info">
+                    <div class="hoodie-name">Heavyweight / Workwear</div>
+                    <div class="hoodie-desc">Thick, durable fleece for cold weather. Made to last with reinforced seams. Perfect for work uniforms and outdoor brands.</div>
+                    <div class="hoodie-features">
+                        <span class="feature-tag">Thick Fleece</span>
+                        <span class="feature-tag">Durable</span>
+                        <span class="feature-tag">Workwear</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hoodie-card">
+                <div class="hoodie-image">🧛</div>
+                <div class="hoodie-info">
+                    <div class="hoodie-name">Zip Crop Hoodie</div>
+                    <div class="hoodie-desc">Combination of zip-up and crop top. Sporty, stylish, and functional. Popular in fitness and fashion influencer culture.</div>
+                    <div class="hoodie-features">
+                        <span class="feature-tag">Zip + Crop</span>
+                        <span class="feature-tag">Sporty</span>
+                        <span class="feature-tag">Fashion</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hoodie-card">
+                <div class="hoodie-image">🎽</div>
+                <div class="hoodie-info">
+                    <div class="hoodie-name">Hoodie Vest</div>
+                    <div class="hoodie-desc">Hoodie without the arms. Great for layering over shirts or under jackets. Provides warmth while keeping arms free.</div>
+                    <div class="hoodie-features">
+                        <span class="feature-tag">Sleeveless</span>
+                        <span class="feature-tag">Layering</span>
+                        <span class="feature-tag">Versatile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Want to create custom hoodies?</h3>
+            <p style="margin-bottom:1rem;color:#666;">Contact us to discuss your custom embroidery project!</p>
+            <a href="contact.html">Get a Quote →</a>
+        </div>
     </div>
 
     <footer>
         <p>© 2026 StitchCo. All rights reserved.</p>
     </footer>
-
-    <script src="inventory.js"></script>
-    <script>
-        const hoodies = getProductsByCategory('hoodie');
-        const container = document.getElementById('products');
-        
-        hoodies.forEach(product => {
-            let colorsHtml = '';
-            
-            product.colors.forEach(color => {
-                const colorStock = getStockForColor(product, color);
-                const stockClass = colorStock === 0 ? 'out-of-stock' : 'in-stock';
-                const stockLabel = colorStock === 0 ? 'Out of Stock' : 'In Stock';
-                
-                let sizesHtml = '';
-                product.sizes.forEach(size => {
-                    const qty = product.stock[color]?.[size] || 0;
-                    const sizeClass = qty === 0 ? 'out-of-stock' : 'in-stock';
-                    sizesHtml += `<span class="size-badge ${sizeClass}">${size}</span>`;
-                });
-                
-                colorsHtml += `
-                    <div class="color-section">
-                        <div class="color-row">
-                            <div class="color-dot" style="background:${color}"></div>
-                            <span class="color-name">${color}</span>
-                            <span class="size-badge ${stockClass}">${stockLabel}</span>
-                        </div>
-                        <div>${sizesHtml}</div>
-                    </div>
-                `;
-            });
-            
-            container.innerHTML += `
-                <div class="product-card">
-                    <div class="product-image">${product.emoji}</div>
-                    <div class="product-info">
-                        <div class="product-name">${product.name}</div>
-                        <div class="product-price">$${product.price}</div>
-                        <div class="section-label">Sizes & Stock</div>
-                        ${colorsHtml}
-                    </div>
-                </div>
-            `;
-        });
-    </script>
 </body>
 </html>
