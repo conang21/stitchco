@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customer testimonials for StitchCo. See what our clients say about our embroidery services and custom apparel.">
+    <meta name="keywords" content="testimonials, reviews, customer feedback, embroidery services, StitchCo">
+    <title>Testimonials | StitchCo.</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f8f8f8; }
+        nav { background: #1a1a1a; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        nav a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: #e63946; }
+        
+        /* Dropdown Navigation */
+        .nav-dropdown { position: relative; }
+        .nav-dropdown > a:after { content: ' ▾'; }
+        .nav-dropdown-content {
+            display: none;
+            position: absolute;
+            background: #2d2d2d;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0.5rem 0;
+            z-index: 1000;
+        }
+        .nav-dropdown:hover > .nav-dropdown-content { display: block !important; }
+        .nav-dropdown-content li { display: block; }
+        .nav-dropdown-content a { display: block; padding: 0.5rem 1rem; white-space: nowrap; }
+        .nav-dropdown-content a:hover { background: #e63946; }
+        
+        .page-header { background: linear-gradient(135deg, #2d2d2d, #1a1a1a); color: #fff; padding: 3rem 2rem; text-align: center; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .testimonial-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .testimonial-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+        .testimonial-avatar { width: 60px; height: 60px; background: linear-gradient(135deg, #e63946, #ff6b6b); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff; font-weight: bold; }
+        .testimonial-author { font-weight: 600; font-size: 1.1rem; }
+        .testimonial-role { color: #666; font-size: 0.9rem; }
+        .testimonial-stars { color: #f1c40f; font-size: 1.2rem; margin-bottom: 1rem; }
+        .testimonial-text { color: #555; line-height: 1.7; font-style: italic; }
+        
+        .cta-section { text-align: center; margin-top: 4rem; padding: 2rem; background: #fff; border-radius: 16px; }
+        .cta-section h3 { margin-bottom: 1rem; }
+        .cta-section a { display: inline-block; background: #e63946; color: #fff; padding: 1rem 2rem; border-radius: 30px; text-decoration: none; font-weight: bold; }
+        
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 3rem 0; }
+        .stat { background: #1a1a1a; color: #fff; padding: 2rem; border-radius: 12px; text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: #e63946; }
+        .stat-label { font-size: 0.9rem; opacity: 0.8; }
+        
+        footer { background: #1a1a1a; color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="nav-dropdown">
+                <a href="hats.html">Products ▾</a>
+                <ul class="nav-dropdown-content">
+                    <li><a href="hats.html">Hats</a></li>
+                    <li><a href="tshirts.html">T-Shirts</a></li>
+                    <li><a href="hoodies.html">Hoodies</a></li>
+                    <li><a href="bags.html">Bags</a></li>
+                    <li><a href="jackets.html">Jackets</a></li>
+                    <li><a href="uniforms.html">Uniforms</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="artwork.html">Artwork</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="testimonials.html" class="active">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>💬 What Our Clients Say</h1>
+        <p>Don't just take our word for it</p>
+    </div>
+
+    <div class="container">
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Would Recommend</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">4.9</div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+        </div>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">MJ</div>
+                    <div>
+                        <div class="testimonial-author">Mike Johnson</div>
+                        <div class="testimonial-role">Owner, Johnson's Gym</div>
+                    </div>
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"We ordered custom embroidered shirts for our entire gym staff. The quality is incredible - the designs still look perfect after 50+ washes. StitchCo. delivered on time and the embroidery stitching is super clean. Highly recommend!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">SL</div>
+                    <div>
+                        <div class="testimonial-author">Sarah Lee</div>
+                        <div class="testimonial-role">Director, Westside Dance Studio</div>
+                    </div>
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"StitchCo. made our competition uniforms absolutely stunning! They took our logo and turned it into beautiful embroidery. The team was professional, communicative, and the final product exceeded our expectations."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">DR</div>
+                    <div>
+                        <div class="testimonial-author">David Rodriguez</div>
+                        <div class="testimonial-role">Manager, Rodriguez Restaurant Group</div>
+                    </div>
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"We needed chef coats and server shirts for our new restaurant. StitchCo. made the entire process easy - from design to delivery. The embroidery on our logo looks premium. Will definitely order again!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">AK</div>
+                    <div>
+                        <div class="testimonial-author">Amanda Kim</div>
+                        <div class="testimonial-role">Founder, Urban Threads Apparel</div>
+                    </div>
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"As a small business owner, I need reliable suppliers. StitchCo. has been amazing - consistent quality, fair pricing, and always on time. Their digitizing team really knows how to optimize designs for embroidery."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">BT</div>
+                    <div>
+                        <div class="testimonial-author">Brian Thompson</div>
+                        <div class="testimonial-role">Coach, Riverside High School Football</div>
+                    </div>
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Ordered jerseys for our entire football team. The players love them and the parents keep complimenting the quality. StitchCo. handled our bulk order with no issues. Great for team orders!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">EW</div>
+                    <div>
+                        <div class="testimonial-author">Emily Watson</div>
+                        <div class="testimonial-role">Event Director, City Marathon</div>
+                    </div>
+                </div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"We needed merch for our annual marathon. StitchCo. delivered 500+ custom shirts in just two weeks! The race day gear looked professional and our participants loved them. Fantastic service!"</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Ready to work with us?</h3>
+            <p style="margin-bottom:1rem;color:#666;">Join hundreds of happy clients who trust StitchCo. for their embroidery needs.</p>
+            <a href="contact.html">Get a Quote →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 StitchCo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
