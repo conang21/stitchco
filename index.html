@@ -46,8 +46,12 @@
         nav a.active {
             color: #e63946;
         }
+        /* Dropdown Navigation */
         .nav-dropdown {
             position: relative;
+        }
+        .nav-dropdown > a:after {
+            content: ' ▾';
         }
         .nav-dropdown-content {
             display: none;
@@ -62,8 +66,8 @@
             padding: 0.5rem 0;
             z-index: 1000;
         }
-        .nav-dropdown:hover .nav-dropdown-content {
-            display: block;
+        .nav-dropdown:hover > .nav-dropdown-content {
+            display: block !important;
         }
         .nav-dropdown-content li {
             display: block;
@@ -76,6 +80,7 @@
         .nav-dropdown-content a:hover {
             background: #e63946;
         }
+
 
         .hero {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
