@@ -99,8 +99,9 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" style="position:absolute;left:-9999px;" onclick="this.style.left=0">Skip to content</a>
     <!-- NJ Wholesale Embroidery contact - get in touch for custom embroidery quotes -->
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li class="nav-dropdown">
@@ -164,11 +165,11 @@
             <form>
                 <div class="form-group">
                     <label>Your Name</label>
-                    <input type="text" placeholder="John Doe">
+                    <input type="text" placeholder="John Doe" aria-label="Your name">
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" placeholder="john@example.com">
+                    <input type="email" placeholder="john@example.com" aria-label="Your email">
                 </div>
                 <div class="form-group">
                     <label>Subject</label>
@@ -181,7 +182,7 @@
                 </div>
                 <div class="form-group">
                     <label>Message</label>
-                    <textarea placeholder="Tell us what's on your mind..."></textarea>
+                    <textarea placeholder="Tell us what's on your mind..." aria-label="Your message"></textarea>
                 </div>
                 <button type="submit" style="width:100%;padding:1rem;background:#FF5F15;color:#fff;border:none;border-radius:8px;font-size:1rem;cursor:pointer;font-weight:600;">Send Message</button>
             </form>
