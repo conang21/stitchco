@@ -114,9 +114,9 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
-        .product-card:first-child .product-name { color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
-        .product-card:first-child .product-desc { color: #f0f0f0; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
-        .product-card:first-child { background: linear-gradient(rgba(30, 58, 95, 0.6), rgba(54, 69, 79, 0.65)), url('images/home-hats-collection.jpg'); background-size: cover; background-position: center; color: #fff; }
+        .product-card.hats-card .product-name { color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+        .product-card.hats-card .product-desc { color: #f0f0f0; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+        .product-card.hats-card { background: linear-gradient(rgba(30, 58, 95, 0.6), rgba(54, 69, 79, 0.65)), url('images/home-hats-collection.jpg'); background-size: cover; background-position: center; color: #fff; }
         .product-card {
             background: #fff;
             border-radius: 12px;
@@ -264,7 +264,7 @@
         <!-- NJ Wholesale Embroidery products - hats, t-shirts, hoodies, bags, jackets -->
         <div class="products-grid">
             <a href="hats.html" style="text-decoration:none;color:inherit;">
-            <div class="product-card" role="img" aria-label="Hats collection - custom embroidered hats">
+            <div class="product-card hats-card" role="img" aria-label="Hats collection - custom embroidered hats">
                 <div class="product-image"></div>
                 <div class="product-info">
                     <div class="product-name">Hats</div>
