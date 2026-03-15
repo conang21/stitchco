@@ -36,7 +36,30 @@
 
     <title>Our Embroidery Process | NJ Wholesale Embroidery</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+            /* Focus styles for accessibility */
+            nav a:focus, button:focus, a:focus, input:focus, select:focus, textarea:focus {
+                outline: 3px solid #FF5F15;
+                outline-offset: 2px;
+            }
+            /* Skip Link */
+            .skip-link {
+                position: absolute;
+                top: -100px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #FF5F15;
+                color: #fff;
+                padding: 1rem 2rem;
+                border-radius: 0 0 8px 8px;
+                z-index: 10000;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .skip-link:focus {
+                top: 0;
+                outline: 3px solid #1e3a5f;
+            }
+            margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f8f8f8; }
         nav { background: #1e3a5f; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
         nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
@@ -135,7 +158,7 @@
     </script>
 </head>
 <body>
-    <a href="#main-content" style="position:absolute;left:-9999px;" onclick="this.style.left=0">Skip to content</a>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <!-- Close-up of professional embroidery machine stitching detailed design on fabric -->
     <nav role="navigation" aria-label="Main navigation">
         <ul>
@@ -169,7 +192,7 @@
         <p>From design to finished product</p>
     </div>
 
-    <div class="container">
+    <div class="container" id="main-content">
         <div class="info-box">
             <h4> What is Embroidery?</h4>
             <p>Embroidery is the art of decorating fabric using needle and thread. Unlike screen printing, embroidery adds texture and dimension — giving your apparel a premium, lasting look.</p>
